@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>POHS Login</title>
+  <link rel='stylesheet' href='https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap'><link rel="stylesheet" href="./loginpage.css">
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<form>
+  
+  <div class="segment">
+    <h1>Sign In</h1>
+  </div>
+  
+  <label>
+    <input type="text" placeholder="Email Address" id="text1"/>
+  </label>
+  <label>
+    <input type="password" placeholder="Password" id="text2"/>
+  </label>
+  <button class="red" type="button" onclick="validate()"><i class="icon ion-md-lock"></i> Log in</button>
+  
+  <div class="segment">
+    <a href="homepage.html">
+      <button class="unit" type="button"><i class="icon ion-md-arrow-back"></i></button>
+    </a>
+    <button class="unit" type="button"><i class="icon ion-md-bookmark"></i></button>
+    <button class="unit" type="button"><i class="icon ion-md-settings"></i></button>
+  </div>
+
+</form>
+<!-- partial -->
+
+<script type="text/javascript">
+  function validate() {
+    const text1 = document.getElementById("text1");
+    const text2 = document.getElementById("text2");
+    if (text1.value == "workshop" && text2.value == "workshop") {
+      load("profile.html");
+    } else {
+      alert("Wrong username or password.");
+    }
+  }
+
+  function load(url) {
+    location.href = url;
+  }
+</script>
+
+</body>
+</html>

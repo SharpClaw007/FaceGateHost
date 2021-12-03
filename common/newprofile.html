@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Student Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'>
+<link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'><link rel="stylesheet" href="./newprofile.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container" ng-app="tabApp">
+  <div class="row" ng-controller="TabController">
+  	<div class="col-md-2">
+  		<ul class="nav nav-pills nav-stacked">
+       	<li ng-class="{ active: isSet(1) }">
+          	<a href ng-click="setTab(1)">Home</a>
+       	</li>
+       	<li ng-class="{ active: isSet(2) }">
+          	<a href ng-click="setTab(2)">Profile</a>
+       	</li>
+       	<li ng-class="{ active: isSet(3) }">
+          	<a href ng-click="setTab(3)">Help</a>
+       	</li>
+     	</ul>
+  	</div>
+    <div class="col-md-8">
+  		<div class="jumbotron">
+       	<div ng-show="isSet(1)">
+         	 <h1>Home Page</h1>
+          	<p>This is where you can view your information, and check in & out.</p>
+         	 <p><a href="loginpage.html" class="btn btn-primary btn-lg" role="button">Sign Out</a></p>
+        	</div>
+			<div ng-show="isSet(2)">
+          <h1>Profile page</h1>
+          <p>Profile information</p>
+				<p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+				<p><button class="btn-primary" id="checkin-button" style="display: none;">Check In</button></p>
+				<p><button class="btn-primary" id="checkout-button" style="display: none;">Check In</button></p>
+			</div>
+        <div ng-show="isSet(3)">
+          <h1>Developer Contact Information</h1>
+          <p> Email: juancarlosreyes@stu.postoakschool.org </p>
+			<p> Phone: ###-###-#### </p>
+		</div>
+  	</div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js'></script><script  src="./googlestatus.js"></script>
+
+</body>
+</html>
